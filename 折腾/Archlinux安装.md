@@ -567,3 +567,11 @@ rm -rf ~/miniconda3/miniconda.sh
 
 ~/miniconda3/bin/conda init zsh
 ```
+
+_7.python_
+
+```bash
+sudo pacman -S python
+sudo pacman -S python-pip
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
