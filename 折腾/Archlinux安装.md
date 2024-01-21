@@ -291,6 +291,11 @@ systemctl enable bluetooth (蓝牙服务)
 sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils
 ```
 
+amd显卡驱动：
+```sh
+sudo pacman -S mesa lib32-mesa xf86-video-amdgpu
+```
+
 触控板驱动：
 
 ```sh
@@ -303,9 +308,20 @@ kde：
 
 ```
 pacman -S xorg plasma kde-applications(完整安装，可以不选，单独安装必备软件)
-pacman -S konsole kate okular filelight dolphin ark
+pacman -S konsole dolphin kate okular filelight  ark
 pacman -S sddm（kde默认的显示管理器，一般默认装）
 systemctl enable sddm（开机自启显示管理）
+```
+
+其他补充安装：
+```
+sudo pacman -S sof-firmware alsa-firmware alsa-ucm-conf # 声音固件
+sudo pacman -S ntfs-3g # 使系统可以识别 NTFS 格式的硬盘
+sudo pacman -S adobe-source-han-serif-cn-fonts wqy-zenhei # 安装几个开源中文字体。一般装上文泉驿就能解决大多 wine 应用中文方块的问题
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # 安装谷歌开源字体及表情
+sudo pacman -S ark # 压缩软件。在 dolphin 中可用右键解压压缩包
+sudo pacman -S packagekit-qt5 packagekit appstream-qt appstream # 确保 Discover（软件中心）可用，需重启
+sudo pacman -S gwenview # 图片查看器
 ```
 
 ### 5.3、配置软件源
